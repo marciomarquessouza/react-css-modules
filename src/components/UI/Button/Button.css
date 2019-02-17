@@ -1,22 +1,23 @@
 .button:link,
 .button:visited {
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all .2s;
   position: relative;
 }
 
 .button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 .button:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
 }
 
 .button::after{
@@ -24,7 +25,7 @@
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -33,7 +34,7 @@
 }
 
 .button:hover::after {
-  transform: scale(1.5);
+  transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
@@ -44,4 +45,21 @@
 
 .buttonWhite::after {
   background-color: #fff;
+}
+
+.buttonAnimation {
+  animation: movingBottom 2s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes movingBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

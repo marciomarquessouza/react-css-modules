@@ -1,13 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import classes from './LogoWhite.css';
 import LogoImage from '../../../assets/img/logo-white.png';
 
 const logoWhite = (props) => (
-  <img src={ LogoImage } alt="Natours" height={ props.height } />
+  <img className={ classes.logoSmall } src={ LogoImage } alt="Natours"/>
 );
-
-logoWhite.propTypes = {
-  height: PropTypes.string.isRequired,
-};
 
 export default logoWhite;

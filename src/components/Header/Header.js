@@ -6,7 +6,7 @@ import classes from './Header.css';
 const header = (props) => (
   <header className={ classes.header }>
     <div className = { classes.logoBox}>
-      <Logo height="35px"/>
+      <Logo/>
     </div>
     <Heading/>
   </header>
